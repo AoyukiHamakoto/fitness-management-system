@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "com.fitness.management.config.JwtProperties",
+      "sourceType": "com.fitness.management.config.JwtProperties"
+    },
+    {
+      "name": "llm",
+      "type": "com.fitness.management.config.LlmProperties",
+      "sourceType": "com.fitness.management.config.LlmProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.expiration",
+      "type": "java.lang.Long",
+      "description": "访问令牌过期时间，单位：毫秒（例如 86400000 表示 24 小时）。",
+      "sourceType": "com.fitness.management.config.JwtProperties"
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "HS256 签名密钥（建议至少 256 bit \/ 32 字节随机串，以满足 JJWT 强度要求）。",
+      "sourceType": "com.fitness.management.config.JwtProperties"
+    },
+    {
+      "name": "llm.api-key",
+      "type": "java.lang.String",
+      "sourceType": "com.fitness.management.config.LlmProperties"
+    },
+    {
+      "name": "llm.api-url",
+      "type": "java.lang.String",
+      "sourceType": "com.fitness.management.config.LlmProperties"
+    },
+    {
+      "name": "llm.model-name",
+      "type": "java.lang.String",
+      "sourceType": "com.fitness.management.config.LlmProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,956 @@
+2026-04-14 10:36:01.409 [main] INFO  c.fitness.management.FitnessManagementApplication - Starting FitnessManagementApplication using Java 21.0.4 with PID 54628 (C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes started by youze in C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend)
+2026-04-14 10:36:01.412 [main] DEBUG c.fitness.management.FitnessManagementApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-04-14 10:36:01.413 [main] INFO  c.fitness.management.FitnessManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-14 10:36:02.823 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-14 10:36:02.830 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-14 10:36:02.937 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 0 Redis repository interfaces.
+2026-04-14 10:36:03.178 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
+2026-04-14 10:36:03.191 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-14 10:36:03.224 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:838)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:620)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.fitness.management.FitnessManagementApplication.main(FitnessManagementApplication.java:15)
+2026-04-14 10:41:32.459 [main] INFO  c.fitness.management.FitnessManagementApplication - Starting FitnessManagementApplication using Java 21.0.4 with PID 52512 (C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes started by youze in C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend)
+2026-04-14 10:41:32.463 [main] DEBUG c.fitness.management.FitnessManagementApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-04-14 10:41:32.465 [main] INFO  c.fitness.management.FitnessManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-14 10:41:33.896 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-14 10:41:33.902 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-14 10:41:34.006 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 0 Redis repository interfaces.
+2026-04-14 10:41:35.351 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-14 10:41:35.372 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-14 10:41:35.372 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-04-14 10:41:35.576 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring embedded WebApplicationContext
+2026-04-14 10:41:35.576 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3021 ms
+2026-04-14 10:41:36.102 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatController' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\controller\chat\ChatController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'chatServiceImpl' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\service\impl\ChatServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'aiDialogServiceImpl': Unsatisfied dependency expressed through field 'baseMapper': Error creating bean with name 'aiDialogMapper' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\mapper\AiDialogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties': Could not bind properties to 'MybatisPlusProperties' : prefix=mybatis-plus, ignoreInvalidFields=false, ignoreUnknownFields=true
+2026-04-14 10:41:36.111 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-14 10:41:36.142 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-14 10:41:36.179 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'mybatis-plus.global-config.db-config' to com.baomidou.mybatisplus.core.config.GlobalConfig$DbConfig:
+
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.util.LinkedHashMap<?, ?>] to type [com.baomidou.mybatisplus.core.config.GlobalConfig$DbConfig]
+
+Action:
+
+Update your application's configuration
+
+2026-04-14 10:41:58.423 [main] INFO  c.fitness.management.FitnessManagementApplication - Starting FitnessManagementApplication using Java 21.0.4 with PID 52472 (C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes started by youze in C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend)
+2026-04-14 10:41:58.424 [main] DEBUG c.fitness.management.FitnessManagementApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-04-14 10:41:58.425 [main] INFO  c.fitness.management.FitnessManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-14 10:41:59.760 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-14 10:41:59.766 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-14 10:41:59.869 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 0 Redis repository interfaces.
+2026-04-14 10:42:01.092 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-14 10:42:01.110 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-14 10:42:01.112 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-04-14 10:42:01.288 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring embedded WebApplicationContext
+2026-04-14 10:42:01.288 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2782 ms
+2026-04-14 10:42:02.623 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatController' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\controller\chat\ChatController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'chatServiceImpl' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\service\impl\ChatServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/RedisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redisConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/LettuceConnectionConfiguration.class]: Failed to instantiate [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory]: Factory method 'redisConnectionFactory' threw exception with message: org/apache/commons/pool2/impl/GenericObjectPoolConfig
+2026-04-14 10:42:02.638 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-14 10:42:02.657 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-14 10:42:02.685 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatController' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\controller\chat\ChatController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'chatServiceImpl' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\service\impl\ChatServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/RedisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redisConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/LettuceConnectionConfiguration.class]: Failed to instantiate [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory]: Factory method 'redisConnectionFactory' threw exception with message: org/apache/commons/pool2/impl/GenericObjectPoolConfig
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.fitness.management.FitnessManagementApplication.main(FitnessManagementApplication.java:15)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatServiceImpl' defined in file [C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes\com\fitness\management\service\impl\ChatServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/RedisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redisConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/LettuceConnectionConfiguration.class]: Failed to instantiate [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory]: Factory method 'redisConnectionFactory' threw exception with message: org/apache/commons/pool2/impl/GenericObjectPoolConfig
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/RedisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redisConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/LettuceConnectionConfiguration.class]: Failed to instantiate [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory]: Factory method 'redisConnectionFactory' threw exception with message: org/apache/commons/pool2/impl/GenericObjectPoolConfig
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/data/redis/LettuceConnectionConfiguration.class]: Failed to instantiate [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory]: Factory method 'redisConnectionFactory' threw exception with message: org/apache/commons/pool2/impl/GenericObjectPoolConfig
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:643)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory]: Factory method 'redisConnectionFactory' threw exception with message: org/apache/commons/pool2/impl/GenericObjectPoolConfig
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 61 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/commons/pool2/impl/GenericObjectPoolConfig
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration$LettucePoolingClientConfigurationBuilder.<init>(LettucePoolingClientConfiguration.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration.builder(LettucePoolingClientConfiguration.java:51)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$PoolBuilderFactory.createBuilder(LettuceConnectionConfiguration.java:218)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.createBuilder(LettuceConnectionConfiguration.java:143)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.getLettuceClientConfiguration(LettuceConnectionConfiguration.java:130)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.createConnectionFactory(LettuceConnectionConfiguration.java:112)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.redisConnectionFactory(LettuceConnectionConfiguration.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 62 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.pool2.impl.GenericObjectPoolConfig
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 72 common frames omitted
+2026-04-14 10:42:25.425 [main] INFO  c.fitness.management.FitnessManagementApplication - Starting FitnessManagementApplication using Java 21.0.4 with PID 55096 (C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes started by youze in C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend)
+2026-04-14 10:42:25.428 [main] DEBUG c.fitness.management.FitnessManagementApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-04-14 10:42:25.430 [main] INFO  c.fitness.management.FitnessManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-14 10:42:26.759 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-14 10:42:26.764 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-14 10:42:26.862 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 0 Redis repository interfaces.
+2026-04-14 10:42:28.094 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-14 10:42:28.114 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-14 10:42:28.114 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-04-14 10:42:28.297 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring embedded WebApplicationContext
+2026-04-14 10:42:28.297 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2782 ms
+2026-04-14 10:42:30.756 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/fitness-api'
+2026-04-14 10:42:30.764 [main] INFO  c.fitness.management.FitnessManagementApplication - Started FitnessManagementApplication in 6.267 seconds (process running for 7.172)
+2026-04-14 10:45:34.416 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-14 10:45:34.417 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-14 10:45:34.418 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-14 10:45:34.682 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - FitnessHikariPool - Starting...
+2026-04-14 10:45:35.916 [http-nio-8080-exec-2] ERROR com.zaxxer.hikari.pool.HikariPool - FitnessHikariPool - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'youze'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:269)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:531)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:610)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.service.impl.UserServiceImpl$$SpringCGLIB$$0.register(<generated>)
+	at com.fitness.management.controller.user.UserController.register(UserController.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.controller.user.UserController$$SpringCGLIB$$0.register(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-14 10:45:35.921 [http-nio-8080-exec-2] ERROR c.f.management.exception.GlobalExceptionHandler - 未捕获异常 | Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:313)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:531)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:610)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.service.impl.UserServiceImpl$$SpringCGLIB$$0.register(<generated>)
+	at com.fitness.management.controller.user.UserController.register(UserController.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.controller.user.UserController$$SpringCGLIB$$0.register(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Access denied for user 'youze'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:269)
+	... 69 common frames omitted
+2026-04-14 10:46:02.946 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - FitnessHikariPool - Starting...
+2026-04-14 10:46:03.957 [http-nio-8080-exec-4] ERROR com.zaxxer.hikari.pool.HikariPool - FitnessHikariPool - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'youze'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:269)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:531)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:610)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.service.impl.UserServiceImpl$$SpringCGLIB$$0.register(<generated>)
+	at com.fitness.management.controller.user.UserController.register(UserController.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.controller.user.UserController$$SpringCGLIB$$0.register(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-14 10:46:03.958 [http-nio-8080-exec-4] ERROR c.f.management.exception.GlobalExceptionHandler - 未捕获异常 | Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:313)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:531)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:610)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.service.impl.UserServiceImpl$$SpringCGLIB$$0.register(<generated>)
+	at com.fitness.management.controller.user.UserController.register(UserController.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.controller.user.UserController$$SpringCGLIB$$0.register(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Access denied for user 'youze'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:269)
+	... 69 common frames omitted
+2026-04-14 13:32:45.191 [main] INFO  c.fitness.management.FitnessManagementApplication - Starting FitnessManagementApplication using Java 21.0.4 with PID 8052 (C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes started by youze in C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend)
+2026-04-14 13:32:45.193 [main] DEBUG c.fitness.management.FitnessManagementApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-04-14 13:32:45.195 [main] INFO  c.fitness.management.FitnessManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-14 13:32:46.489 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-14 13:32:46.495 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-14 13:32:46.620 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 0 Redis repository interfaces.
+2026-04-14 13:32:47.713 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-14 13:32:47.732 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-14 13:32:47.733 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-04-14 13:32:47.870 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring embedded WebApplicationContext
+2026-04-14 13:32:47.871 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2605 ms
+2026-04-14 13:32:50.473 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-04-14 13:32:50.509 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-14 13:32:50.551 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-04-14 13:42:30.529 [main] INFO  c.fitness.management.FitnessManagementApplication - Starting FitnessManagementApplication using Java 21.0.4 with PID 9092 (C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes started by youze in C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend)
+2026-04-14 13:42:30.531 [main] DEBUG c.fitness.management.FitnessManagementApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-04-14 13:42:30.532 [main] INFO  c.fitness.management.FitnessManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-14 13:42:31.384 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-14 13:42:31.388 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-14 13:42:31.454 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2026-04-14 13:42:32.280 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-14 13:42:32.296 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-14 13:42:32.296 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-04-14 13:42:32.419 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring embedded WebApplicationContext
+2026-04-14 13:42:32.419 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1816 ms
+2026-04-14 13:42:34.052 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/fitness-api'
+2026-04-14 13:42:34.057 [main] INFO  c.fitness.management.FitnessManagementApplication - Started FitnessManagementApplication in 4.117 seconds (process running for 4.6)
+2026-04-14 14:13:44.999 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-14 14:13:45.010 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-14 14:13:45.081 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 69 ms
+2026-04-14 14:13:45.730 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - FitnessHikariPool - Starting...
+2026-04-14 14:13:46.218 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - FitnessHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@759dfbaa
+2026-04-14 14:13:46.223 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - FitnessHikariPool - Start completed.
+2026-04-14 14:13:46.517 [http-nio-8080-exec-3] DEBUG c.fitness.management.mapper.UserMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM user WHERE (username = ?)
+2026-04-14 14:13:46.569 [http-nio-8080-exec-3] DEBUG c.fitness.management.mapper.UserMapper.selectCount - ==> Parameters: 123(String)
+2026-04-14 14:13:46.671 [http-nio-8080-exec-3] DEBUG c.fitness.management.mapper.UserMapper.selectCount - <==      Total: 1
+2026-04-14 14:13:46.683 [http-nio-8080-exec-3] DEBUG c.fitness.management.mapper.UserMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM user WHERE (phone = ?)
+2026-04-14 14:13:46.684 [http-nio-8080-exec-3] DEBUG c.fitness.management.mapper.UserMapper.selectCount - ==> Parameters: 13812345601(String)
+2026-04-14 14:13:46.687 [http-nio-8080-exec-3] DEBUG c.fitness.management.mapper.UserMapper.selectCount - <==      Total: 1
+2026-04-14 14:13:46.812 [http-nio-8080-exec-3] DEBUG com.fitness.management.mapper.UserMapper.insert - ==>  Preparing: INSERT INTO user ( username, phone, password, nickname, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2026-04-14 14:13:46.816 [http-nio-8080-exec-3] DEBUG com.fitness.management.mapper.UserMapper.insert - ==> Parameters: 123(String), 13812345601(String), $2a$10$afAl3QtM8LeXpbr7d8JBnumnWylv7/lf5jTe46HzIrdj7WYGZcoqa(String), 123(String), 1(Integer), 2026-04-14T14:13:46.804567200(LocalDateTime), 2026-04-14T14:13:46.804567200(LocalDateTime)
+2026-04-14 14:13:46.830 [http-nio-8080-exec-3] DEBUG com.fitness.management.mapper.UserMapper.insert - <==    Updates: 1
+2026-04-14 14:13:54.698 [http-nio-8080-exec-4] DEBUG c.fitness.management.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,phone,password,nickname,status,create_time,update_time FROM user WHERE (username = ?)
+2026-04-14 14:13:54.700 [http-nio-8080-exec-4] DEBUG c.fitness.management.mapper.UserMapper.selectList - ==> Parameters: 123(String)
+2026-04-14 14:13:54.710 [http-nio-8080-exec-4] DEBUG c.fitness.management.mapper.UserMapper.selectList - <==      Total: 1
+2026-04-14 14:13:54.845 [http-nio-8080-exec-4] ERROR c.f.management.exception.GlobalExceptionHandler - 未捕获异常 | jwt.secret 未配置，无法签发 Token
+java.lang.IllegalStateException: jwt.secret 未配置，无法签发 Token
+	at com.fitness.management.utils.JwtUtils.generateToken(JwtUtils.java:58)
+	at com.fitness.management.service.impl.UserServiceImpl.login(UserServiceImpl.java:95)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.fitness.management.service.impl.UserServiceImpl$$SpringCGLIB$$0.login(<generated>)
+	at com.fitness.management.controller.user.UserController.login(UserController.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.fitness.management.controller.user.UserController$$SpringCGLIB$$0.login(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-14 14:17:16.611 [main] INFO  c.fitness.management.FitnessManagementApplication - Starting FitnessManagementApplication using Java 21.0.4 with PID 42456 (C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend\target\classes started by youze in C:\Users\youze\Documents\Cursor Projects\fitness-management-system\fitness-management-backend)
+2026-04-14 14:17:16.614 [main] DEBUG c.fitness.management.FitnessManagementApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-04-14 14:17:16.615 [main] INFO  c.fitness.management.FitnessManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-14 14:17:18.369 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-14 14:17:18.376 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-14 14:17:18.506 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 0 Redis repository interfaces.
+2026-04-14 14:17:20.199 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-14 14:17:20.223 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-14 14:17:20.224 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-04-14 14:17:20.448 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring embedded WebApplicationContext
+2026-04-14 14:17:20.448 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3722 ms
+2026-04-14 14:17:23.546 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/fitness-api'
+2026-04-14 14:17:23.555 [main] INFO  c.fitness.management.FitnessManagementApplication - Started FitnessManagementApplication in 8.062 seconds (process running for 9.058)
+2026-04-14 14:20:15.273 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/fitness-api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-14 14:20:15.276 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-14 14:20:15.285 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2026-04-14 14:20:16.806 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - FitnessHikariPool - Starting...
+2026-04-14 14:20:17.200 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - FitnessHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@507fce2a
+2026-04-14 14:20:17.205 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - FitnessHikariPool - Start completed.
+2026-04-14 14:20:17.225 [http-nio-8080-exec-2] DEBUG c.fitness.management.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,phone,password,nickname,status,create_time,update_time FROM user WHERE (username = ?)
+2026-04-14 14:20:17.275 [http-nio-8080-exec-2] DEBUG c.fitness.management.mapper.UserMapper.selectList - ==> Parameters: 123(String)
+2026-04-14 14:20:17.338 [http-nio-8080-exec-2] DEBUG c.fitness.management.mapper.UserMapper.selectList - <==      Total: 1
+2026-04-14 14:20:18.397 [http-nio-8080-exec-8] DEBUG c.fitness.management.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,phone,password,nickname,status,create_time,update_time FROM user WHERE id=?
+2026-04-14 14:20:18.399 [http-nio-8080-exec-8] DEBUG c.fitness.management.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2026-04-14 14:20:18.404 [http-nio-8080-exec-8] DEBUG c.fitness.management.mapper.UserMapper.selectById - <==      Total: 1
+2026-04-14 14:20:18.413 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:18.416 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:18.417 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:18.418 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:18.455 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:18.455 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:18.461 [http-nio-8080-exec-6] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划
+2026-04-14 14:20:18.461 [http-nio-8080-exec-7] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划，无法打卡
+2026-04-14 14:20:38.868 [http-nio-8080-exec-10] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:38.869 [http-nio-8080-exec-10] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:38.871 [http-nio-8080-exec-10] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:38.873 [http-nio-8080-exec-10] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划
+2026-04-14 14:20:50.033 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:50.034 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:50.036 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:50.037 [http-nio-8080-exec-2] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划，无法打卡
+2026-04-14 14:20:52.485 [http-nio-8080-exec-5] DEBUG c.fitness.management.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,phone,password,nickname,status,create_time,update_time FROM user WHERE id=?
+2026-04-14 14:20:52.486 [http-nio-8080-exec-5] DEBUG c.fitness.management.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2026-04-14 14:20:52.488 [http-nio-8080-exec-5] DEBUG c.fitness.management.mapper.UserMapper.selectById - <==      Total: 1
+2026-04-14 14:20:53.982 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:53.982 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:53.984 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:53.985 [http-nio-8080-exec-1] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划，无法打卡
+2026-04-14 14:20:54.370 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:54.371 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:54.373 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:54.374 [http-nio-8080-exec-8] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划
+2026-04-14 14:20:54.686 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:54.687 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:54.688 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:54.688 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:54.689 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:54.690 [http-nio-8080-exec-7] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划，无法打卡
+2026-04-14 14:20:54.691 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:54.691 [http-nio-8080-exec-6] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划
+2026-04-14 14:20:58.340 [http-nio-8080-exec-10] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:20:58.341 [http-nio-8080-exec-10] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:20:58.342 [http-nio-8080-exec-10] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 0
+2026-04-14 14:20:58.343 [http-nio-8080-exec-10] WARN  c.f.management.exception.GlobalExceptionHandler - 业务异常 | code=400 | message=当前没有进行中的健身计划
+2026-04-14 14:21:01.751 [http-nio-8080-exec-2] WARN  c.f.m.service.impl.PlanGenerateServiceImpl - 大模型调用失败，使用默认计划: 未配置大模型 API Key（llm.api-key）
+2026-04-14 14:21:01.774 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.update - ==>  Preparing: UPDATE fitness_plan SET status=?,update_time=? WHERE (user_id = ? AND status = ?)
+2026-04-14 14:21:01.777 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.update - ==> Parameters: 2(Integer), 2026-04-14T14:21:01.762070500(LocalDateTime), 1(Long), 1(Integer)
+2026-04-14 14:21:01.811 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.update - <==    Updates: 0
+2026-04-14 14:21:01.817 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.insert - ==>  Preparing: INSERT INTO fitness_plan ( user_id, plan_name, plan_desc, start_date, end_date, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-04-14 14:21:01.820 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.insert - ==> Parameters: 1(Long), 基础有氧与力量入门（系统推荐）(String), 根据您当前信息（目标：减脂，经验：初级）生成的保守入门方案，待大模型可用后可重新生成个性化版本。(String), 2026-04-14(LocalDate), 2026-05-11(LocalDate), 1(Integer), 2026-04-14T14:21:01.812247100(LocalDateTime), 2026-04-14T14:21:01.812247100(LocalDateTime)
+2026-04-14 14:21:01.834 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.insert - <==    Updates: 1
+2026-04-14 14:21:01.854 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==>  Preparing: INSERT INTO plan_detail ( plan_id, day_index, exercise_name, duration_minutes, sort_order, create_time ) VALUES ( ?, ?, ?, ?, ?, ? )
+2026-04-14 14:21:01.856 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 1(Integer), 动态热身(String), 10(Integer), 1(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.858 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 1(Integer), 快走或椭圆机有氧(String), 30(Integer), 2(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.860 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 1(Integer), 静态拉伸放松(String), 5(Integer), 3(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.861 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 2(Integer), 动态热身(String), 10(Integer), 4(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.863 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 2(Integer), 快走或椭圆机有氧(String), 30(Integer), 5(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.865 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 2(Integer), 静态拉伸放松(String), 5(Integer), 6(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.866 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 3(Integer), 动态热身(String), 10(Integer), 7(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.868 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 3(Integer), 快走或椭圆机有氧(String), 30(Integer), 8(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.869 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 3(Integer), 静态拉伸放松(String), 5(Integer), 9(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.871 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 4(Integer), 动态热身(String), 10(Integer), 1(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.874 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 4(Integer), 快走或椭圆机有氧(String), 30(Integer), 2(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.875 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 4(Integer), 静态拉伸放松(String), 5(Integer), 3(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.877 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 5(Integer), 动态热身(String), 10(Integer), 4(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.878 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 5(Integer), 快走或椭圆机有氧(String), 30(Integer), 5(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.881 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 5(Integer), 静态拉伸放松(String), 5(Integer), 6(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.882 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 6(Integer), 动态热身(String), 10(Integer), 7(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.883 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 6(Integer), 快走或椭圆机有氧(String), 30(Integer), 8(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.884 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 6(Integer), 静态拉伸放松(String), 5(Integer), 9(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.885 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 7(Integer), 动态热身(String), 10(Integer), 1(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.887 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 7(Integer), 快走或椭圆机有氧(String), 30(Integer), 2(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.890 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 7(Integer), 静态拉伸放松(String), 5(Integer), 3(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.891 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 8(Integer), 动态热身(String), 10(Integer), 4(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.893 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 8(Integer), 快走或椭圆机有氧(String), 30(Integer), 5(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.894 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 8(Integer), 静态拉伸放松(String), 5(Integer), 6(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.895 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 9(Integer), 动态热身(String), 10(Integer), 7(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.896 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 9(Integer), 快走或椭圆机有氧(String), 30(Integer), 8(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.898 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 9(Integer), 静态拉伸放松(String), 5(Integer), 9(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.899 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 10(Integer), 动态热身(String), 10(Integer), 1(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.901 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 10(Integer), 快走或椭圆机有氧(String), 30(Integer), 2(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.903 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 10(Integer), 静态拉伸放松(String), 5(Integer), 3(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.905 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 11(Integer), 动态热身(String), 10(Integer), 4(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.906 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 11(Integer), 快走或椭圆机有氧(String), 30(Integer), 5(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.909 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 11(Integer), 静态拉伸放松(String), 5(Integer), 6(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.911 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 12(Integer), 动态热身(String), 10(Integer), 7(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.913 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 12(Integer), 快走或椭圆机有氧(String), 30(Integer), 8(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.915 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.insert - ==> Parameters: 1(Long), 12(Integer), 静态拉伸放松(String), 5(Integer), 9(Integer), 2026-04-14T14:21:01.840354900(LocalDateTime)
+2026-04-14 14:21:01.994 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.FitnessPlanMapper.selectById - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE id=?
+2026-04-14 14:21:01.996 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.FitnessPlanMapper.selectById - ==> Parameters: 1(Long)
+2026-04-14 14:21:01.998 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.FitnessPlanMapper.selectById - <==      Total: 1
+2026-04-14 14:21:02.003 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index ASC,sort_order ASC
+2026-04-14 14:21:02.004 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:02.014 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 36
+2026-04-14 14:21:08.264 [http-nio-8080-exec-9] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:08.264 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:08.265 [http-nio-8080-exec-9] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:08.265 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:08.268 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:08.268 [http-nio-8080-exec-9] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:08.272 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index DESC LIMIT 1
+2026-04-14 14:21:08.273 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:08.275 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 1
+2026-04-14 14:21:08.279 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ? AND day_index = ?) ORDER BY sort_order ASC
+2026-04-14 14:21:08.280 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:08.283 [http-nio-8080-exec-8] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 3
+2026-04-14 14:21:08.288 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:08.288 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:08.299 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:08.301 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:08.302 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:08.304 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:08.305 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:08.306 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 3(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:08.307 [http-nio-8080-exec-8] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:09.967 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:09.967 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:09.969 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:09.971 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index DESC LIMIT 1
+2026-04-14 14:21:09.971 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:09.974 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 1
+2026-04-14 14:21:09.976 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ? AND day_index = ?) ORDER BY sort_order ASC
+2026-04-14 14:21:09.976 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:09.978 [http-nio-8080-exec-7] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 3
+2026-04-14 14:21:09.980 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:09.980 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:09.982 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:09.983 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:09.983 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:09.985 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:09.986 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:09.987 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 3(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:09.989 [http-nio-8080-exec-7] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:11.779 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:11.780 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:11.782 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:11.783 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PlanDetailMapper.selectById - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE id=?
+2026-04-14 14:21:11.784 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PlanDetailMapper.selectById - ==> Parameters: 1(Long)
+2026-04-14 14:21:11.787 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PlanDetailMapper.selectById - <==      Total: 1
+2026-04-14 14:21:11.790 [http-nio-8080-exec-4] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:11.793 [http-nio-8080-exec-4] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:11.795 [http-nio-8080-exec-4] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:11.799 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PunchRecordMapper.insert - ==>  Preparing: INSERT INTO punch_record ( user_id, plan_id, plan_detail_id, punch_date, actual_sets, actual_weight, remark, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-04-14 14:21:11.804 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PunchRecordMapper.insert - ==> Parameters: 1(Long), 1(Long), 1(Long), 2026-04-14(LocalDate), 3(Integer), 0.00(BigDecimal), (String), 2026-04-14T14:21:11.796576700(LocalDateTime)
+2026-04-14 14:21:11.806 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PunchRecordMapper.insert - <==    Updates: 1
+2026-04-14 14:21:11.809 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PlanDetailMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM plan_detail WHERE (plan_id = ?)
+2026-04-14 14:21:11.809 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PlanDetailMapper.selectCount - ==> Parameters: 1(Long)
+2026-04-14 14:21:11.813 [http-nio-8080-exec-4] DEBUG c.f.management.mapper.PlanDetailMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:11.816 [http-nio-8080-exec-4] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_id = ? AND plan_detail_id IS NOT NULL)
+2026-04-14 14:21:11.817 [http-nio-8080-exec-4] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long)
+2026-04-14 14:21:11.819 [http-nio-8080-exec-4] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:11.915 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:11.916 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:11.918 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:11.920 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index DESC LIMIT 1
+2026-04-14 14:21:11.921 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:11.924 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 1
+2026-04-14 14:21:11.926 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ? AND day_index = ?) ORDER BY sort_order ASC
+2026-04-14 14:21:11.927 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:11.930 [http-nio-8080-exec-2] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 3
+2026-04-14 14:21:11.931 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:11.931 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:11.934 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:11.936 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:11.937 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:11.938 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:11.941 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:11.941 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 3(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:11.943 [http-nio-8080-exec-2] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:12.846 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:12.847 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:12.848 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:12.849 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectById - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE id=?
+2026-04-14 14:21:12.850 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectById - ==> Parameters: 2(Long)
+2026-04-14 14:21:12.852 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectById - <==      Total: 1
+2026-04-14 14:21:12.853 [http-nio-8080-exec-3] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:12.854 [http-nio-8080-exec-3] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:12.855 [http-nio-8080-exec-3] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:12.857 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PunchRecordMapper.insert - ==>  Preparing: INSERT INTO punch_record ( user_id, plan_id, plan_detail_id, punch_date, actual_sets, actual_weight, remark, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-04-14 14:21:12.857 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PunchRecordMapper.insert - ==> Parameters: 1(Long), 1(Long), 2(Long), 2026-04-14(LocalDate), 3(Integer), 0.00(BigDecimal), (String), 2026-04-14T14:21:12.855965700(LocalDateTime)
+2026-04-14 14:21:12.860 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PunchRecordMapper.insert - <==    Updates: 1
+2026-04-14 14:21:12.861 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM plan_detail WHERE (plan_id = ?)
+2026-04-14 14:21:12.862 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectCount - ==> Parameters: 1(Long)
+2026-04-14 14:21:12.863 [http-nio-8080-exec-3] DEBUG c.f.management.mapper.PlanDetailMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:12.864 [http-nio-8080-exec-3] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_id = ? AND plan_detail_id IS NOT NULL)
+2026-04-14 14:21:12.865 [http-nio-8080-exec-3] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long)
+2026-04-14 14:21:12.867 [http-nio-8080-exec-3] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:12.913 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:12.913 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:12.916 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:12.918 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index DESC LIMIT 1
+2026-04-14 14:21:12.918 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:12.920 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 1
+2026-04-14 14:21:12.923 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ? AND day_index = ?) ORDER BY sort_order ASC
+2026-04-14 14:21:12.923 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:12.926 [http-nio-8080-exec-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 3
+2026-04-14 14:21:12.928 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:12.930 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:12.932 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:12.933 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:12.933 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:12.935 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:12.937 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:12.937 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 3(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:12.938 [http-nio-8080-exec-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:24.097 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:24.098 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:24.102 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:24.105 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index DESC LIMIT 1
+2026-04-14 14:21:24.106 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:24.109 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 1
+2026-04-14 14:21:24.111 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ? AND day_index = ?) ORDER BY sort_order ASC
+2026-04-14 14:21:24.112 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:24.115 [http-nio-8080-exec-6] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 3
+2026-04-14 14:21:24.116 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:24.116 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:24.119 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:24.120 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:24.121 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:24.122 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:24.124 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:24.125 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 3(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:24.127 [http-nio-8080-exec-6] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:29.809 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:29.810 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:29.811 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:29.813 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:21:29.814 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:29.816 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:21:29.819 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index DESC LIMIT 1
+2026-04-14 14:21:29.819 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:29.821 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 1
+2026-04-14 14:21:29.822 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ? AND day_index = ?) ORDER BY sort_order ASC
+2026-04-14 14:21:29.822 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:21:29.825 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 3
+2026-04-14 14:21:29.827 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:29.828 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:29.829 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:29.831 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:29.832 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:29.834 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:29.835 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:21:29.836 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 3(Long), 2026-04-14(LocalDate)
+2026-04-14 14:21:29.837 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:21:29.840 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.BodyDataRecordMapper.selectList - ==>  Preparing: SELECT id,user_id,record_date,weight,create_time FROM body_data_record WHERE (user_id = ?) ORDER BY record_date DESC LIMIT 1
+2026-04-14 14:21:29.841 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.BodyDataRecordMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:21:29.848 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.BodyDataRecordMapper.selectList - <==      Total: 0
+2026-04-14 14:21:36.262 [http-nio-8080-exec-9] DEBUG c.fitness.management.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,phone,password,nickname,status,create_time,update_time FROM user WHERE id=?
+2026-04-14 14:21:36.264 [http-nio-8080-exec-9] DEBUG c.fitness.management.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2026-04-14 14:21:36.268 [http-nio-8080-exec-9] DEBUG c.fitness.management.mapper.UserMapper.selectById - <==      Total: 1
+2026-04-14 14:22:27.252 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:22:27.253 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:22:27.254 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:22:27.256 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==>  Preparing: SELECT id,user_id,plan_name,plan_desc,start_date,end_date,status,create_time,update_time FROM fitness_plan WHERE (user_id = ? AND status = ?) ORDER BY create_time DESC LIMIT 1
+2026-04-14 14:22:27.256 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:22:27.258 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.FitnessPlanMapper.selectList - <==      Total: 1
+2026-04-14 14:22:27.258 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ?) ORDER BY day_index DESC LIMIT 1
+2026-04-14 14:22:27.258 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:22:27.260 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 1
+2026-04-14 14:22:27.262 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==>  Preparing: SELECT id,plan_id,day_index,exercise_name,duration_minutes,sort_order,create_time FROM plan_detail WHERE (plan_id = ? AND day_index = ?) ORDER BY sort_order ASC
+2026-04-14 14:22:27.263 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - ==> Parameters: 1(Long), 1(Integer)
+2026-04-14 14:22:27.265 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.management.mapper.PlanDetailMapper.selectList - <==      Total: 3
+2026-04-14 14:22:27.266 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:22:27.267 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 1(Long), 2026-04-14(LocalDate)
+2026-04-14 14:22:27.268 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:22:27.269 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:22:27.270 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 2(Long), 2026-04-14(LocalDate)
+2026-04-14 14:22:27.272 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:22:27.273 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM punch_record WHERE (user_id = ? AND plan_detail_id = ? AND punch_date = ?)
+2026-04-14 14:22:27.274 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - ==> Parameters: 1(Long), 3(Long), 2026-04-14(LocalDate)
+2026-04-14 14:22:27.276 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.PunchRecordMapper.selectCount - <==      Total: 1
+2026-04-14 14:22:27.277 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.BodyDataRecordMapper.selectList - ==>  Preparing: SELECT id,user_id,record_date,weight,create_time FROM body_data_record WHERE (user_id = ?) ORDER BY record_date DESC LIMIT 1
+2026-04-14 14:22:27.278 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.BodyDataRecordMapper.selectList - ==> Parameters: 1(Long)
+2026-04-14 14:22:27.279 [ForkJoinPool.commonPool-worker-1] DEBUG c.f.m.mapper.BodyDataRecordMapper.selectList - <==      Total: 0
