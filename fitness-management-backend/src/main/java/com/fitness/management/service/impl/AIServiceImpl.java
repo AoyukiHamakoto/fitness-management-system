@@ -169,6 +169,10 @@ public class AIServiceImpl implements AIService {
         root.put("model", llmProperties.getModelName());
         root.put("stream", stream);
         root.put("temperature", 0.35);
+        int maxTok = llmProperties.getMaxTokens();
+        if (maxTok > 0) {
+            root.put("max_tokens", maxTok);
+        }
         ArrayNode messages = root.putArray("messages");
         ObjectNode sys = messages.addObject();
         sys.put("role", "system");

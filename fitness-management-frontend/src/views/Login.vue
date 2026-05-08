@@ -6,6 +6,17 @@
         <p class="subtitle">登录或注册以继续使用</p>
       </header>
 
+      <el-alert
+        class="login-hint"
+        type="info"
+        :closable="false"
+        show-icon
+      >
+        请使用<strong>注册时的用户名</strong>登录（不是手机号）。文档里的 root/123456 是
+        <strong>MySQL 数据库</strong>密码，不是网站密码。执行初始化脚本后可用演示账号：
+        <code>demo</code> / <code>demo123</code>。
+      </el-alert>
+
       <el-card class="login-card" shadow="hover">
         <el-tabs v-model="activeTab" class="login-tabs" stretch @tab-change="onTabChange">
           <el-tab-pane label="账号登录" name="login">
@@ -352,6 +363,18 @@ onMounted(() => {
     margin: 0;
     font-size: 0.9rem;
     color: #64748b;
+  }
+}
+
+.login-hint {
+  margin-bottom: 16px;
+  line-height: 1.5;
+  font-size: 13px;
+
+  code {
+    padding: 0 4px;
+    border-radius: 4px;
+    background: rgba(148, 163, 184, 0.2);
   }
 }
 

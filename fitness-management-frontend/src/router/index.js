@@ -50,6 +50,24 @@ const router = createRouter({
           component: () => import('@/views/Profile.vue'),
           meta: { title: '个人中心' },
         },
+        {
+          path: 'dashboard',
+          name: 'Dashboard',
+          component: () => import('@/views/Dashboard.vue'),
+          meta: { title: '数据看板' },
+        },
+        {
+          path: 'exercise-library',
+          name: 'ExerciseLibrary',
+          component: () => import('@/views/ExerciseLibrary.vue'),
+          meta: { title: '训练动作库' },
+        },
+        {
+          path: 'leaderboard',
+          name: 'Leaderboard',
+          component: () => import('@/views/Leaderboard.vue'),
+          meta: { title: '运动排行榜' },
+        },
       ],
     },
     {

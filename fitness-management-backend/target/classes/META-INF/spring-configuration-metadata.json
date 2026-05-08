@@ -16,13 +16,15 @@
       "name": "jwt.expiration",
       "type": "java.lang.Long",
       "description": "访问令牌过期时间，单位：毫秒（例如 86400000 表示 24 小时）。",
-      "sourceType": "com.fitness.management.config.JwtProperties"
+      "sourceType": "com.fitness.management.config.JwtProperties",
+      "defaultValue": 86400000
     },
     {
       "name": "jwt.secret",
       "type": "java.lang.String",
       "description": "HS256 签名密钥（建议至少 256 bit \/ 32 字节随机串，以满足 JJWT 强度要求）。",
-      "sourceType": "com.fitness.management.config.JwtProperties"
+      "sourceType": "com.fitness.management.config.JwtProperties",
+      "defaultValue": ""
     },
     {
       "name": "llm.api-key",
@@ -32,11 +34,25 @@
     {
       "name": "llm.api-url",
       "type": "java.lang.String",
+      "description": "完整 chat-completions URL，例如讯飞：https:\/\/maas-api.cn-huabei-1.xf-yun.com\/v2\/chat\/completions",
+      "sourceType": "com.fitness.management.config.LlmProperties"
+    },
+    {
+      "name": "llm.fallback-enabled",
+      "type": "java.lang.Boolean",
+      "description": "大模型未配置或调用失败时，是否使用固定话术流式降级（SSE 协议与正常对话一致）。",
+      "sourceType": "com.fitness.management.config.LlmProperties"
+    },
+    {
+      "name": "llm.max-tokens",
+      "type": "java.lang.Integer",
+      "description": "单次生成最大 token（计划生成 JSON 需要足够长度；0 表示不传该字段）",
       "sourceType": "com.fitness.management.config.LlmProperties"
     },
     {
       "name": "llm.model-name",
       "type": "java.lang.String",
+      "description": "控制台「模型服务」中的 modelId，例如 Qwen3.5-2B",
       "sourceType": "com.fitness.management.config.LlmProperties"
     }
   ],

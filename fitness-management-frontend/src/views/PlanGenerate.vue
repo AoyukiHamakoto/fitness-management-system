@@ -159,7 +159,13 @@
                   <el-table-column label="训练日" width="100" fixed>
                     <template #default="{ row }">第 {{ row.dayIndex }} 天</template>
                   </el-table-column>
-                  <el-table-column prop="exerciseName" label="动作" min-width="120" show-overflow-tooltip />
+                  <el-table-column label="动作" min-width="140" show-overflow-tooltip>
+                    <template #default="{ row }">
+                      <el-button type="primary" link @click="goExerciseLibrary(row.exerciseName)">
+                        {{ row.exerciseName }}
+                      </el-button>
+                    </template>
+                  </el-table-column>
                   <el-table-column label="时长(分)" width="88" align="center">
                     <template #default="{ row }">{{ row.durationMinutes ?? '—' }}</template>
                   </el-table-column>
@@ -204,8 +210,10 @@
 import { ref, reactive, computed, onMounted, watch } from 'vue'
 import { ElMessage } from 'element-plus'
 import { MagicStick } from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router'
 import request from '@/utils/request'
 
+const router = useRouter()
 const formRef = ref(null)
 const generating = ref(false)
 const loadingPlan = ref(false)
@@ -306,6 +314,10 @@ function displayWeight() {
 function displayRest(row, index) {
   const base = 60 + ((row.sortOrder || 0) + index) % 4 * 15
   return base
+}
+
+function goExerciseLibrary(actionName) {
+  router.push({ name: 'ExerciseLibrary', query: { action: actionName || '' } })
 }
 
 async function loadCurrentPlan() {

@@ -86,15 +86,18 @@ jwt:
   expiration: 86400000
 
 # -----------------------------------------------------------------------------
-# 6. 大模型 API（OpenAI 兼容：Bearer + /v1/chat/completions 类接口）
+# 6. 大模型 API（OpenAI 兼容 Chat Completions：Bearer + JSON body）
+# 默认：讯飞 MaaS 华北 v2 + Qwen3.5-2B（控制台「API Key」常为 APIKey:APISecret，整段作为 Bearer）
 # -----------------------------------------------------------------------------
 llm:
-  # 请填写：API Key（请求头 Authorization: Bearer {api-key}）
+  # 敏感：务必用环境变量注入，勿提交仓库。例（PowerShell）：$env:LLM_API_KEY="你的APIKey:你的APISecret"
   api-key: "${LLM_API_KEY:}"
-  # 请填写：对话补全完整 URL（示例为 OpenAI；国内兼容服务请替换为厂商给定地址）
-  api-url: "${LLM_API_URL:https://api.openai.com/v1/chat/completions}"
-  # 请填写：模型名称（与服务商文档一致，如 gpt-4o-mini、deepseek-chat 等）
-  model-name: "${LLM_MODEL_NAME:gpt-4o-mini}"
+  # 须为「完整」chat 地址；控制台若给 base https://.../v2 则补全为 .../v2/chat/completions
+  api-url: "${LLM_API_URL:https://maas-api.cn-huabei-1.xf-yun.com/v2/chat/completions}"
+  model-name: "${LLM_MODEL_NAME:Qwen3.5-2B}"
+  max-tokens: ${LLM_MAX_TOKENS:8192}
+  # 未配置 API Key、或流式调用失败时，是否使用固定话术继续输出（设为 false 则失败时仅返回错误）
+  fallback-enabled: ${LLM_FALLBACK_ENABLED:true}
 
 # -----------------------------------------------------------------------------
 # 7. 跨域（供自定义 WebMvcConfigurer / CorsFilter 读取，非 Spring 内置项）

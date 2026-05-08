@@ -35,11 +35,12 @@
 
 - 数据库账号密码（或环境变量 `MYSQL_USERNAME` / `MYSQL_PASSWORD`）
 - **`JWT_SECRET`**：JWT 签名密钥（建议至少 32 字节随机串）
-- **大模型**：`LLM_API_KEY`、`LLM_API_URL`、`LLM_MODEL_NAME`（AI 生成计划与对话依赖；无可用 Key 时相关功能会失败）
+- **大模型（默认对接讯飞 MaaS OpenAI 兼容接口）**：在运行环境中设置 **`LLM_API_KEY`**（控制台常为 **`APIKey:APISecret`** 整段，含英文冒号，作为 `Authorization: Bearer …` 传入）。可选覆盖：`LLM_API_URL`（须为完整地址，如 `https://maas-api.cn-huabei-1.xf-yun.com/v2/chat/completions`）、`LLM_MODEL_NAME`（须与控制台 modelId 一致，如 `Qwen3.5-2B`）、`LLM_MAX_TOKENS`。未配置 Key 时，AI 对话可走固定话术降级（见 `llm.fallback-enabled`）；计划生成会回退内置模板。
 
-数据库初始化：创建库名 **`fitness_mvp`**。仓库默认在 `application.yml` 中配置 **`root` / `123456`**（可用环境变量 `MYSQL_USERNAME`、`MYSQL_PASSWORD` 覆盖）。
+数据库初始化：创建库名 **`fitness_mvp`**。仓库默认在 `application.yml` 中配置 **`root` / `123456`**（可用环境变量 `MYSQL_USERNAME`、`MYSQL_PASSWORD` 覆盖）。**注意：这是连接 MySQL 的账号，不是网站登录账号。** 网站登录使用「注册时的用户名」。
 
-- **Windows**：可将 `mysql` 加入 PATH 后，双击根目录 **`初始化数据库.bat`**（会按脚本重建表）；或手动执行 `fitness-management-backend/src/main/resources/db/fitness_mvp_schema.sql`（已调整为先建库再 `DROP`/`CREATE` 表，避免「No database selected」）。
+- **推荐一键脚本**：`fitness-management-backend/src/main/resources/db/fitness_mvp_all.sql`（已合并建表、`demo`/`demo123` 演示账号的幂等插入，以及旧版 `punch_record` 字段/索引的条件化补丁）。**Windows** 可将 `mysql` 加入 PATH 后双击根目录 **`初始化数据库.bat`**（已指向该合并脚本）。
+- **拆分文件**（与合并版内容对应，按需单独维护或引用）：`fitness_mvp_schema.sql`、`seed_demo_user.sql`、`alter_punch_record_checkin_columns.sql`。仅补演示用户时可执行 `seed_demo_user.sql`（避免在 PowerShell 里把含 `$` 的哈希内联进 `-e` 参数）。
 
 Redis 默认连接 **`127.0.0.1:6379`**，无密码时 `application.yml` 中密码留空即可。
 
@@ -74,7 +75,7 @@ winget install Memurai.MemuraiDeveloper
 导入表结构（在仓库根目录执行，路径按本机调整）：
 
 ```bash
-docker exec -i mysql-dev mysql -uroot -prootpass fitness_mvp < fitness-management-backend/src/main/resources/db/fitness_mvp_schema.sql
+docker exec -i mysql-dev mysql -uroot -prootpass --default-character-set=utf8mb4 < fitness-management-backend/src/main/resources/db/fitness_mvp_all.sql
 ```
 
 ---
@@ -171,6 +172,9 @@ npm run preview
 
 - **跨域**：后端已配置允许本地前端源（如 `http://localhost:5173`）；若更换端口或域名，请同步修改后端 CORS 与前端 `request.js` 中的 `baseURL`。
 - **登录后 401**：检查 `JWT_SECRET` 是否已配置、令牌是否过期、请求头是否携带 `Authorization: Bearer <token>`。
+- **讯飞 MaaS 大模型**：`application.yml` 已默认 `api-url` + `Qwen3.5-2B`。请在**启动后端前**设置环境变量（勿把 Key 写入仓库）。PowerShell 示例：  
+  `$env:LLM_API_KEY="你的APIKey:你的APISecret"`  
+  若控制台 modelId 与默认不一致，再设：`$env:LLM_MODEL_NAME="控制台显示的模型ID"`。
 
 ---
 

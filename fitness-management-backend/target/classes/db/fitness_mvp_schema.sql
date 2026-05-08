@@ -135,3 +135,16 @@ CREATE TABLE `body_data_record` (
     CONSTRAINT `fk_body_data_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
         ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='身体数据记录表';
+
+-- -----------------------------------------------------------------------------
+-- 演示账号（BCrypt 与后端 PasswordEncoder 一致；密码含字母+数字，与前端注册规则一致）
+-- 说明：README 中的 root/123456 是 MySQL 连接账号，不是本系统的登录账号。
+-- -----------------------------------------------------------------------------
+INSERT INTO `user` (`username`, `phone`, `password`, `nickname`, `status`)
+VALUES (
+    'demo',
+    '13800138000',
+    '$2a$10$MtSAtc62oSBeNRTJPDJEwusPplHKxNxU.nYLquOq5GFIkOPvlGpBu',
+    '演示用户',
+    1
+);

@@ -1,7 +1,9 @@
 package com.fitness.management.service.impl;
 
 import com.fitness.management.ai.AIResponseHandler;
+import com.fitness.management.chat.ChatFallbackMode;
 import com.fitness.management.chat.ChatUserContext;
+import com.fitness.management.config.LlmProperties;
 import com.fitness.management.dto.chat.ChatStreamRequestDto;
 import com.fitness.management.entity.AiDialog;
 import com.fitness.management.entity.BodyDataRecord;
@@ -10,6 +12,7 @@ import com.fitness.management.exception.BusinessException;
 import com.fitness.management.service.AIService;
 import com.fitness.management.service.AiDialogService;
 import com.fitness.management.service.BodyDataRecordService;
+import com.fitness.management.service.ChatFallbackService;
 import com.fitness.management.service.ChatService;
 import com.fitness.management.service.CheckInService;
 import com.fitness.management.service.FitnessPlanService;
@@ -43,6 +46,8 @@ public class ChatServiceImpl implements ChatService {
     private static final String REDIS_CHAT_RL_PREFIX = "chat:rl:";
 
     private final AIService aiService;
+    private final ChatFallbackService chatFallbackService;
+    private final LlmProperties llmProperties;
     private final AiDialogService aiDialogService;
     private final StringRedisTemplate stringRedisTemplate;
     private final CheckInService checkInService;
@@ -74,6 +79,17 @@ public class ChatServiceImpl implements ChatService {
             String systemPrompt = buildSystemPersona();
             String userPrompt = buildPromptWithContext(ctx, message);
 
+            if (!chatFallbackService.isLlmConfigured()) {
+                if (llmProperties.isFallbackEnabled()) {
+                    log.info("大模型未配置，AI 对话使用固定话术降级 userId={}", userId);
+                    streamFallbackContent(userId, sessionId, message, ctx, emitter, ChatFallbackMode.NO_LLM_CONFIGURED);
+                } else {
+                    emitErrorEvent(emitter, "未配置大模型 API Key（llm.api-key），且已关闭固定话术降级（llm.fallback-enabled）");
+                    emitter.complete();
+                }
+                return;
+            }
+
             aiService.streamChatWithHandler(systemPrompt, userPrompt, new AIResponseHandler() {
                 @Override
                 public void onToken(String token) {
@@ -102,6 +118,21 @@ public class ChatServiceImpl implements ChatService {
 
                 @Override
                 public void onError(Throwable error) {
+                    if (llmProperties.isFallbackEnabled()) {
+                        log.warn("大模型流式失败，使用固定话术降级 userId={} err={}", userId,
+                                error.getMessage() != null ? error.getMessage() : error.getClass().getSimpleName());
+                        try {
+                            streamFallbackContent(userId, sessionId, message, ctx, emitter, ChatFallbackMode.LLM_UNAVAILABLE);
+                        } catch (Exception ex) {
+                            log.error("固定话术降级输出失败 userId={}", userId, ex);
+                            try {
+                                emitErrorEvent(emitter, "对话服务暂时不可用");
+                            } catch (IOException ignored) {
+                            }
+                            emitter.completeWithError(ex);
+                        }
+                        return;
+                    }
                     String msg = error.getMessage() != null ? error.getMessage() : "对话服务异常";
                     if (error.getCause() != null && StringUtils.hasText(error.getCause().getMessage())) {
                         msg = error.getCause().getMessage();
@@ -271,5 +302,23 @@ public class ChatServiceImpl implements ChatService {
 
     private void emitErrorEvent(SseEmitter emitter, String message) throws IOException {
         emitter.send(SseEmitter.event().name("error").data(message != null ? message : "error"));
+    }
+
+    /**
+     * 固定话术降级：按字推送 token 事件，与真实大模型流式协议一致，并落库。
+     */
+    private void streamFallbackContent(Long userId, String sessionId, String userMessage,
+                                      ChatUserContext ctx, SseEmitter emitter, ChatFallbackMode mode)
+            throws IOException {
+        String full = chatFallbackService.composeFixedReply(ctx, userMessage, mode);
+        if (full == null) {
+            full = "";
+        }
+        for (int i = 0; i < full.length(); i++) {
+            emitter.send(SseEmitter.event().name("token").data(String.valueOf(full.charAt(i))));
+        }
+        saveChatHistory(userId, sessionId, userMessage, full);
+        emitter.send(SseEmitter.event().name("done").data(""));
+        emitter.complete();
     }
 }

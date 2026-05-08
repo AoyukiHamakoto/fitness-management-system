@@ -120,6 +120,9 @@ import {
   Cpu,
   Right,
   User,
+  DataAnalysis,
+  Reading,
+  Trophy,
 } from '@element-plus/icons-vue'
 import request from '@/utils/request'
 import { useUserStore } from '@/stores/user'
@@ -168,6 +171,27 @@ const featureEntries = [
     path: '/ai-chat',
     icon: ChatDotRound,
     tone: 'violet',
+  },
+  {
+    title: '数据看板',
+    desc: '体重/BMI 趋势、打卡热力图与完成率分析',
+    path: '/dashboard',
+    icon: DataAnalysis,
+    tone: 'amber',
+  },
+  {
+    title: '训练动作库',
+    desc: '查看动作目标肌群、难度与图文示范，解决“不会做”',
+    path: '/exercise-library',
+    icon: Reading,
+    tone: 'sky',
+  },
+  {
+    title: '运动排行榜',
+    desc: '查看周/月打卡榜单，用游戏化机制增强坚持动力',
+    path: '/leaderboard',
+    icon: Trophy,
+    tone: 'rose',
   },
   {
     title: '个人中心',
@@ -441,6 +465,18 @@ onMounted(() => {
   }
   &.slate {
     background: linear-gradient(135deg, #475569, #64748b);
+    color: #fff;
+  }
+  &.amber {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: #fff;
+  }
+  &.sky {
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+    color: #fff;
+  }
+  &.rose {
+    background: linear-gradient(135deg, #e11d48, #fb7185);
     color: #fff;
   }
 }

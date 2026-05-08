@@ -69,6 +69,18 @@
               <el-icon><ChatDotRound /></el-icon>
               <span>AI 对话</span>
             </el-menu-item>
+            <el-menu-item index="/dashboard">
+              <el-icon><DataAnalysis /></el-icon>
+              <span>数据看板</span>
+            </el-menu-item>
+            <el-menu-item index="/exercise-library">
+              <el-icon><Reading /></el-icon>
+              <span>训练动作库</span>
+            </el-menu-item>
+            <el-menu-item index="/leaderboard">
+              <el-icon><Trophy /></el-icon>
+              <span>运动排行榜</span>
+            </el-menu-item>
             <el-menu-item index="/profile">
               <el-icon><User /></el-icon>
               <span>个人中心</span>
@@ -99,6 +111,9 @@ import {
   Calendar,
   CircleCheck,
   ChatDotRound,
+  DataAnalysis,
+  Reading,
+  Trophy,
   User,
   ArrowDown,
   SwitchButton,

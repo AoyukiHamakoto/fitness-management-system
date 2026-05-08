@@ -4,7 +4,7 @@ setlocal
 title 智能健身 - 初始化 MySQL（fitness_mvp）
 
 set "ROOT=%~dp0"
-set "SQL=%ROOT%fitness-management-backend\src\main\resources\db\fitness_mvp_schema.sql"
+set "SQL=%ROOT%fitness-management-backend\src\main\resources\db\fitness_mvp_all.sql"
 
 if not exist "%SQL%" (
   echo [错误] 找不到脚本: "%SQL%"
